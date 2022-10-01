@@ -1,0 +1,36 @@
+*{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    background-color: #6DBCDB;
+}
+
+.progress-bar {
+    border-color: white;
+    border: 20px;
+    position: fixed;
+    width: 200px;
+    height: 20px;
+    background-color: #cfe1f8;
+    overflow: hidden;
+    border: 10px solid white;
+    box-shadow: 0 2px steelblue;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(138, 252, 195);
+    transform: translateX(-100%);
+    animation: fill-bar 2s 1.3s ease-in-out forwards;
+}
+
+
+
+@keyframes fill-bar {
+    to {
+        transform: translateX(0%);
+    }
+}
